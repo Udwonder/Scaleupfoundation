@@ -26,6 +26,7 @@ import {
   Leaf,
   MonitorSmartphone,
   BarChart3,
+  Phone,
   Megaphone,
 } from "lucide-react"
 import Link from "next/link"
@@ -441,6 +442,8 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-6 md:mb-0">
               <Image src={"/svgs/inline-logo.svg"} width={200} height={150} alt="ScaleUp Foundation Logo" />
+
+              {/* Address Link */}
               <a
                 href="https://maps.google.com/?q=25+Yakubu+Gowon+Crescent,+Asokoro,+Abuja"
                 target="_blank"
@@ -450,46 +453,37 @@ export default function Home() {
                 <MapPin className="h-4 w-4 mr-2" />
                 <span>25 Yakubu Gowon Crescent, Opposite A.A. Rano Filling Station, Asokoro, Abuja.</span>
               </a>
+
+              {/* Phone Link */}
+              <a
+                href="tel:+2348062375026"
+                className="flex items-center mt-2 text-gray-300 hover:text-[#a9f285] transition-colors text-xs sm:text-sm"
+              >
+                <Phone className="h-4 w-4 mr-2" />
+                <span>+234 806 237 5026</span>
+              </a>
             </div>
 
             {/* Mobile Footer Navigation */}
             <div className="md:hidden flex flex-wrap justify-center gap-4 text-sm">
-              <Link href="#mission" className="hover:text-[#a9f285]">
-                Our Mission
-              </Link>
-              <Link href="#about" className="hover:text-[#a9f285]">
-                About Us
-              </Link>
-              <Link href="#process" className="hover:text-[#a9f285]">
-                How We Work
-              </Link>
-              <Link href="#services" className="hover:text-[#a9f285]">
-                Services
-              </Link>
-              <Link href="mailto:meetus@scaleupfoundation.org" className="hover:text-[#a9f285]">
-                Contact
-              </Link>
+              <Link href="#mission" className="hover:text-[#a9f285]">Our Mission</Link>
+              <Link href="#about" className="hover:text-[#a9f285]">About Us</Link>
+              <Link href="#process" className="hover:text-[#a9f285]">How We Work</Link>
+              <Link href="#services" className="hover:text-[#a9f285]">Services</Link>
+              <Link href="mailto:meetus@scaleupfoundation.org" className="hover:text-[#a9f285]">Contact</Link>
             </div>
 
             {/* Desktop Footer Navigation */}
             <div className="hidden md:flex gap-8">
-              <Link href="#mission" className="hover:text-[#a9f285]">
-                Our Mission
-              </Link>
-              <Link href="#about" className="hover:text-[#a9f285]">
-                About Us
-              </Link>
-              <Link href="#process" className="hover:text-[#a9f285]">
-                How We Work
-              </Link>
-              <Link href="#services" className="hover:text-[#a9f285]">
-                Services
-              </Link>
-              <Link href="mailto:meetus@scaleupfoundation.org" className="hover:text-[#a9f285]">
-                Contact
-              </Link>
+              <Link href="#mission" className="hover:text-[#a9f285]">Our Mission</Link>
+              <Link href="#about" className="hover:text-[#a9f285]">About Us</Link>
+              <Link href="#process" className="hover:text-[#a9f285]">How We Work</Link>
+              <Link href="#services" className="hover:text-[#a9f285]">Services</Link>
+              <Link href="mailto:meetus@scaleupfoundation.org" className="hover:text-[#a9f285]">Contact</Link>
             </div>
           </div>
+
+          {/* Footer bottom */}
           <div className="mt-6 sm:mt-8 text-center text-xs sm:text-sm text-gray-400">
             <div className="mb-2">© {new Date().getFullYear()} ScaleUp Foundation. All rights reserved.</div>
             <div className="text-gray-300">
@@ -506,6 +500,7 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
     </main>
   )
 }
